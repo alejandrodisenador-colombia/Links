@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartGrafic - Publicidad Creactiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Fondo con imagen difuminada como en la referencia */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.4) blur(5px);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        /* Botones estilo exacto a la imagen subida */
+        .link-button {
+            background-color: #cbd5e1; /* Gris claro suave */
+            color: #1e293b;
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-transform: none; /* Mantener mayúsculas/minúsculas según texto */
+            letter-spacing: -0.02em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            border: none;
+        }
+
+        .link-button:hover {
+            background-color: #f1f5f9;
+            transform: scale(1.03);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Botón de WhatsApp estilizado */
+        .whatsapp-button {
+            background-color: #58c264;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 10px 20px -5px rgba(88, 194, 100, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #4bb358;
+            transform: scale(1.02);
+        }
+
+        .logo-container {
+            background-color: #000;
+            border-radius: 2rem;
+            padding: 1.2rem;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            border: 1px solid #111;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="w-full max-w-md px-6 flex flex-col items-center fade-in text-center">
+        
+        <!-- Logo de SmartGrafic -->
+        <div class="logo-container mb-12 w-44 h-44 flex items-center justify-center overflow-hidden">
+            <img src="logo vertical.jpg" alt="Logo SmartGrafic" class="w-full h-full object-contain">
+        </div>
+
+        <!-- Lista de Enlaces -->
+        <div class="w-full space-y-5 mb-12">
+            
+            <a href="https://69dfd6207d23ed672982621b--neon-basbousa-851288.netlify.app/" target="_blank" class="link-button flex items-center justify-center w-full py-4 rounded-2xl">
+                Cotizador NEON
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61576227491697&locale=es_LA" target="_blank" class="link-button flex items-center justify-center w-full py-4 rounded-2xl">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/agenciagrafic/" target="_blank" class="link-button flex items-center justify-center w-full py-4 rounded-2xl">
+                Instagram
+            </a>
+
+            <a href="https://github.com/alejandrodisenador-colombia/Links" target="_blank" class="link-button flex items-center justify-center w-full py-4 rounded-2xl">
+                GitHub
+            </a>
+
+        </div>
+
+        <!-- Botón de WhatsApp -->
+        <div class="w-full">
+            <a href="https://w.app/smartgrafic" target="_blank" class="whatsapp-button flex items-center justify-center w-full py-4 rounded-2xl text-lg gap-3">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>Habla con una asesor</span>
+            </a>
+        </div>
+
+        <!-- Créditos -->
+        <footer class="mt-12 text-zinc-500 text-[10px] font-bold tracking-[0.3em] uppercase opacity-50">
+            SmartGrafic • Publicidad Creactiva
+        </footer>
+
+    </div>
+
+</body>
+</html>
